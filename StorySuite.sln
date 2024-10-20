@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35209.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorySuite", "StorySuite\StorySuite.csproj", "{C20B7A0E-BC43-4330-9D19-249C57FF613C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorySuite.Models", "StorySuite.Models\StorySuite.Models.csproj", "{FA5B854D-650F-4823-815D-82F9A266358F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C20B7A0E-BC43-4330-9D19-249C57FF613C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C20B7A0E-BC43-4330-9D19-249C57FF613C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C20B7A0E-BC43-4330-9D19-249C57FF613C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA5B854D-650F-4823-815D-82F9A266358F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA5B854D-650F-4823-815D-82F9A266358F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA5B854D-650F-4823-815D-82F9A266358F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA5B854D-650F-4823-815D-82F9A266358F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

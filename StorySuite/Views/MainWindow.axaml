@@ -21,14 +21,14 @@
 			<RowDefinition />
 		</Grid.RowDefinitions>
 
-		<!--<Menu>
+		<Menu>
 			<MenuItem Header="_File">
 				<MenuItem Header="_New"></MenuItem>
 				<MenuItem Header="_Open"></MenuItem>
 				<MenuItem Header="_Save"></MenuItem>
 				<MenuItem Header="_Save Copy"></MenuItem>
 			</MenuItem>
-		</Menu>-->
+		</Menu>
 		<!--<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
 	</Grid>
 </Window>
