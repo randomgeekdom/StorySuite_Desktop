@@ -9,12 +9,26 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="StorySuite">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+		<vm:MainWindowViewModel />
+	</Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
 
+		<!--<Menu>
+			<MenuItem Header="_File">
+				<MenuItem Header="_New"></MenuItem>
+				<MenuItem Header="_Open"></MenuItem>
+				<MenuItem Header="_Save"></MenuItem>
+				<MenuItem Header="_Save Copy"></MenuItem>
+			</MenuItem>
+		</Menu>-->
+		<!--<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
+	</Grid>
 </Window>
