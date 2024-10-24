@@ -14,26 +14,38 @@ namespace StorySuite.Models
         public string? FilePath { get; private set; }
         public string Name { get; private set; }
 
+        /// <summary>
+        /// Use this when adding a new project
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static Result<StoryProject> TryCreate(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
             {
-                return Result.Invalid(new ValidationError($"{nameof(name)} must contain a value"));
+                var nameText = nameof(name);
+                return GetRequireValueError(nameText);
             }
 
             return new StoryProject(name, null);
         }
 
+        /// <summary>
+        /// Use this when loading an existing project
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
         public static Result<StoryProject> TryLoad(StoryProjectDto dto, string filePath)
         {
             if (string.IsNullOrWhiteSpace(filePath))
             {
-                return Result.Invalid(new ValidationError($"{nameof(filePath)} must contain a value"));
+                return GetRequireValueError(nameof(filePath));
             }
 
             if (string.IsNullOrWhiteSpace(dto.Name))
             {
-                return Result.Invalid(new ValidationError($"{nameof(dto.Name)} must have a vallue"));
+                return GetRequireValueError(nameof(dto.Name));
             }
 
             return new StoryProject(dto.Name, filePath);
@@ -46,6 +58,11 @@ namespace StorySuite.Models
                 Id = this.Id,
                 Name = this.Name
             };
+        }
+
+        private static Result<StoryProject> GetRequireValueError(string nameText)
+        {
+            return Result.Invalid(new ValidationError($"{nameText} must contain a value"));
         }
     }
 }

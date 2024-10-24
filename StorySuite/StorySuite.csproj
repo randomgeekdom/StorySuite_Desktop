@@ -24,4 +24,8 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.2.0-rc1" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StorySuite.Models\StorySuite.Models.csproj" />
+  </ItemGroup>
 </Project>
