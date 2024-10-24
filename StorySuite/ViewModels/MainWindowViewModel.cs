@@ -7,7 +7,6 @@ namespace StorySuite.ViewModels
 {
     public partial class MainWindowViewModel : ViewModelBase
     {
-        private bool isDirty = false;
         private StoryProject? project;
 
         public MainWindowViewModel()
@@ -16,8 +15,8 @@ namespace StorySuite.ViewModels
         }
 
         public ViewModelBase CurrentPage { get; } = new TestViewModel();
-
         public string Greeting => "Welcome to Avalonia!";
+        public bool IsDirty { get; set; } = false;
         public bool IsProjectLoaded => Project != null;
         public RelayCommand NewCommand { get; }
         public ObservableCollection<ViewModelBase> Pages { get; } = new ObservableCollection<ViewModelBase>();
@@ -38,12 +37,12 @@ namespace StorySuite.ViewModels
 
         public void CreateNewProject()
         {
-            if (isDirty)
+            if (IsDirty)
             {
             }
 
             this.Project = StoryProject.TryCreate("New Project");
-            isDirty = false;
+            IsDirty = true;
         }
     }
 }
